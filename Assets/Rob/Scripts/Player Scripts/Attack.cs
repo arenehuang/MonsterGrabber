@@ -27,6 +27,8 @@ public class Attack : MonoBehaviour {
     [SerializeField] private Animator _player_animator;
     [SerializeField] private SpriteRenderer _player_sprite_renderer;
 
+    [SerializeField] private Grab _player_grab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +47,7 @@ public class Attack : MonoBehaviour {
     }
 
     public void OnAttack(InputAction.CallbackContext context) {
-        if (context.performed && !_is_attacking) {
+        if (context.performed && !_is_attacking && _player_grab.HeldEnemy == null) {
             _player_animator.SetBool("Attacking", true);
 
             _player_movement.CanMove = false;
@@ -69,6 +71,9 @@ public class Attack : MonoBehaviour {
             else if (_attack_direction.x < 0) {
                 _player_sprite_renderer.flipX = true;
             }
+        }
+        else if (context.performed && !_is_attacking && _player_grab.HeldEnemy != null) {
+            _player_grab.HeldEnemy.Use();
         }
         
     }

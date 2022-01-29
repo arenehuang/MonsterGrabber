@@ -317,6 +317,7 @@ MonoBehaviour:
   _attack_direction: {x: 0, y: 0, z: 0}
   _player_animator: {fileID: 7553205478798675764}
   _player_sprite_renderer: {fileID: 7553205478798675771}
+  _player_grab: {fileID: 1781222316180083127}
 --- !u!114 &1781222316180083127
 MonoBehaviour:
   m_ObjectHideFlags: 0

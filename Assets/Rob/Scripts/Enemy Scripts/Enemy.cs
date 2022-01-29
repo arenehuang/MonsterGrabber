@@ -84,6 +84,7 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    public void Use() { 
+    public void Use() {
+        Debug.Log("Being used");
     }
 }
