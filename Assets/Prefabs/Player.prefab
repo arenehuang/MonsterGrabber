@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 7553205478798675764}
   - component: {fileID: 7553205478798675765}
   - component: {fileID: 1781222316180083127}
+  - component: {fileID: 1523986866}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -334,6 +335,21 @@ MonoBehaviour:
   _player_targeter: {fileID: 7553205479495156716}
   _held_enemy: {fileID: 0}
   _hold_point: {fileID: 446268671}
+--- !u!114 &1523986866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7553205478798675763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70db918e7b25c7f4ea0ede3c77f2f75c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _current_hp: 10
+  _max_hp: 10
+  _player_healthbar_controller: {fileID: 0}
 --- !u!1 &7553205479128162012
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,6 +446,7 @@ MonoBehaviour:
   _reticle_speed: 1
   _reticle_smooth_time: 0.1
   _reticle_velocity: {x: 300, y: 300, z: 300}
+  _player_grab: {fileID: 1781222316180083127}
 --- !u!1001 &7553205479380344216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -437,6 +454,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7553205478798675762}
     m_Modifications:
+    - target: {fileID: 4723989028127669206, guid: 67687e24d29dbf04aaa81aef80faa3c8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723989028400045309, guid: 67687e24d29dbf04aaa81aef80faa3c8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723989028683117657, guid: 67687e24d29dbf04aaa81aef80faa3c8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723989028754219329, guid: 67687e24d29dbf04aaa81aef80faa3c8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723989028934995524, guid: 67687e24d29dbf04aaa81aef80faa3c8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4723989029129015824, guid: 67687e24d29dbf04aaa81aef80faa3c8, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -496,6 +533,10 @@ PrefabInstance:
     - target: {fileID: 4723989029129015825, guid: 67687e24d29dbf04aaa81aef80faa3c8, type: 3}
       propertyPath: m_Name
       value: Reticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723989029129015825, guid: 67687e24d29dbf04aaa81aef80faa3c8, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4723989029129015825, guid: 67687e24d29dbf04aaa81aef80faa3c8, type: 3}
       propertyPath: m_IsActive

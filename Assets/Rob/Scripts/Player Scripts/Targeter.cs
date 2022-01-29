@@ -15,6 +15,7 @@ public class Targeter : MonoBehaviour {
     [SerializeField] private float _reticle_speed = 4f;
     [SerializeField] private float _reticle_smooth_time = 1f;
     [SerializeField] private Vector3 _reticle_velocity = Vector3.zero;
+    [SerializeField] private Grab _player_grab;
 
     private void Awake() {
 
@@ -34,19 +35,29 @@ public class Targeter : MonoBehaviour {
     public void CheckTargetableEnemies() {
         if (targetable_enemies.Count > 1) {
             foreach (Enemy e in targetable_enemies) {
+                if (e != _player_grab.HeldEnemy) {
+                    if (e == null) {
+                        targetable_enemies.Remove(e);
+                        break;
+                    }
 
-                if (targeted_enemy == null) {
-                    targeted_enemy = e;
-                }
-                else if (e != targeted_enemy && e!= null) {
-                    float others_distance = Vector3.Distance(probe_transform.position, e.transform.position);
-                    float current_target_distance = Vector3.Distance(probe_transform.position, targeted_enemy.transform.position);
-
-                    if (others_distance < current_target_distance) {
+                    if (targeted_enemy == null) {
                         targeted_enemy = e;
+                    }
+                    else if (e != targeted_enemy && e != null) {
+                        float others_distance = Vector3.Distance(probe_transform.position, e.transform.position);
+                        float current_target_distance = Vector3.Distance(probe_transform.position, targeted_enemy.transform.position);
+
+                        if (others_distance < current_target_distance) {
+                            targeted_enemy = e;
+                        }
                     }
                 }
             }
+        }
+
+        if (targeted_enemy == _player_grab.HeldEnemy) {
+            targeted_enemy = null;
         }
     }
 
