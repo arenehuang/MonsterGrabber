@@ -182,7 +182,19 @@ MonoBehaviour:
     m_ActionId: 30be6017-47e5-4792-97a5-d3e5035f134c
     m_ActionName: Player/Attack[/Keyboard/enter]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1781222316180083127}
+        m_TargetAssemblyTypeName: Grab, Assembly-CSharp
+        m_MethodName: OnGrab
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 710e740e-0d98-4d57-bf85-4bf6064da8c2
     m_ActionName: Player/Grab[/Keyboard/quote]
   m_NeverAutoSwitchControlSchemes: 0
@@ -207,6 +219,7 @@ MonoBehaviour:
   _can_move: 1
   _player_animator: {fileID: 7553205478798675764}
   _player_sprite_renderer: {fileID: 7553205478798675771}
+  _player_grab: {fileID: 1781222316180083127}
 --- !u!212 &7553205478798675771
 SpriteRenderer:
   m_ObjectHideFlags: 0
