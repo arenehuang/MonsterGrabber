@@ -8,6 +8,8 @@ public class Targeter : MonoBehaviour {
 
     public List<Enemy> targetable_enemies;
     public Enemy targeted_enemy;
+    public Enemy enemy_to_attack;
+    public Transform probe_transform;
     [SerializeField] private Vector2 _raw_movement;
 
     private void Awake() {
@@ -25,12 +27,12 @@ public class Targeter : MonoBehaviour {
     }
 
     private void CheckTargetableEnemies() {
-        if (targetable_enemies.Count > 1) {
+        if (targetable_enemies.Count > 1 && targeted_enemy != null) {
             foreach (Enemy e in targetable_enemies) {
 
                 if (e != targeted_enemy) {
-                    float others_distance = Vector3.Distance(this.transform.position, e.transform.position);
-                    float current_target_distance = Vector3.Distance(this.transform.position, targeted_enemy.transform.position);
+                    float others_distance = Vector3.Distance(probe_transform.position, e.transform.position);
+                    float current_target_distance = Vector3.Distance(probe_transform.position, targeted_enemy.transform.position);
 
                     if (others_distance < current_target_distance) {
                         targeted_enemy = e;
@@ -42,7 +44,8 @@ public class Targeter : MonoBehaviour {
 
     public void SetMovement(InputAction.CallbackContext context) {
         _raw_movement = context.ReadValue<Vector2>();
-
+        probe_transform.localPosition = new Vector3(_raw_movement.x, 0, _raw_movement.y);
+        //Debug.Log("Raw Movement: " + _raw_movement.x + ", " + _raw_movement.y);
     }
 
     private void OnTriggerEnter(Collider other) {
