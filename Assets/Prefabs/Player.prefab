@@ -430,6 +430,7 @@ MonoBehaviour:
   _reticle_speed: 1
   _reticle_smooth_time: 0.1
   _reticle_velocity: {x: 300, y: 300, z: 300}
+  _player_grab: {fileID: 1781222316180083127}
 --- !u!1001 &7553205479380344216
 PrefabInstance:
   m_ObjectHideFlags: 0
