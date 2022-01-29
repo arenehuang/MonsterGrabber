@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour {
     [SerializeField] private Vector2 _raw_movement;
     [SerializeField] private bool _can_move = true;
     [SerializeField] private Animator _player_animator;
+    [SerializeField] private SpriteRenderer _player_sprite_renderer;
 
     public bool CanMove {
         get { return _can_move; }
@@ -26,6 +27,13 @@ public class Movement : MonoBehaviour {
             _player_animator.SetBool("Walking", true);
             float lr_movement = _raw_movement.x;
             float fb_movement = _raw_movement.y;
+
+            if (lr_movement > 0) {
+                _player_sprite_renderer.flipX = false;
+            }
+            else if (lr_movement < 0) {
+                _player_sprite_renderer.flipX = true;
+            }
 
             Vector3 total_movment = new Vector3(lr_movement, 0, fb_movement);
             total_movment.Normalize();

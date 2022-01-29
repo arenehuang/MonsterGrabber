@@ -25,7 +25,7 @@ public class Attack : MonoBehaviour {
     [SerializeField] private Vector3 _attack_direction;
 
     [SerializeField] private Animator _player_animator;
-
+    [SerializeField] private SpriteRenderer _player_sprite_renderer;
 
     // Start is called before the first frame update
     void Start()
@@ -63,6 +63,13 @@ public class Attack : MonoBehaviour {
             else {
                 Debug.Log("Enemy to attack was null");
                 _attack_direction = new Vector3(_last_raw_movement.x, 0, _last_raw_movement.y).normalized;
+            }
+
+            if (_attack_direction.x > 0) {
+                _player_sprite_renderer.flipX = false;
+            }
+            else if (_attack_direction.x < 0) {
+                _player_sprite_renderer.flipX = true;
             }
         }
         
