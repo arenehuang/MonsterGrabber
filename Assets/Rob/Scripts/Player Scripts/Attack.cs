@@ -94,7 +94,6 @@ public class Attack : MonoBehaviour {
             //Apply knockback
             Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
             if (rb != null) {
-                Debug.Log("Applying knockback");
                 Vector3 direction = collision.transform.position - _player_transform.position;
                 rb.AddForce(direction.normalized * _knock_back_force, ForceMode.Impulse);
             }
