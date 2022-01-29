@@ -11,6 +11,10 @@ public class Targeter : MonoBehaviour {
     public Enemy enemy_to_attack;
     public Transform probe_transform;
     [SerializeField] private Vector2 _raw_movement;
+    [SerializeField] private GameObject _reticle_go;
+    [SerializeField] private float _reticle_speed = 4f;
+    [SerializeField] private float _reticle_smooth_time = 1f;
+    [SerializeField] private Vector3 _reticle_velocity = Vector3.zero;
 
     private void Awake() {
 
@@ -22,8 +26,9 @@ public class Targeter : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {
+    void FixedUpdate() {
         CheckTargetableEnemies();
+        MoveReticle();
     }
 
     public void CheckTargetableEnemies() {
@@ -42,6 +47,18 @@ public class Targeter : MonoBehaviour {
                     }
                 }
             }
+        }
+    }
+
+    private void MoveReticle() {
+        if (targeted_enemy == null) {
+            _reticle_go.SetActive(false);
+        }
+        else {
+
+            _reticle_go.SetActive(true);
+            _reticle_go.transform.position = Vector3.SmoothDamp(_reticle_go.transform.position, targeted_enemy.transform.position, ref _reticle_velocity, _reticle_smooth_time);
+
         }
     }
 
