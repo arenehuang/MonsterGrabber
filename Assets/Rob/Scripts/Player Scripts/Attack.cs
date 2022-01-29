@@ -91,7 +91,7 @@ public class Attack : MonoBehaviour {
             if (collision.gameObject.tag == "Enemy") {
                 collision.gameObject.GetComponent<Enemy>().DoDamage(_current_damage);
 
-
+                _player_targeter.CheckTargetableEnemies();
             }
 
             //Apply knockback
