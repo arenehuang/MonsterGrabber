@@ -59,7 +59,7 @@ public class Attack : MonoBehaviour {
                 _attack_direction = (_enemy_to_attack.transform.position - _player_transform.position).normalized;
             }
             else {
-                Debug.Log("Enemy to attack is null");
+                //Debug.Log("Enemy to attack is null");
                 _attack_direction = new Vector3(_last_raw_movement.x, 0, _last_raw_movement.y).normalized;
             }
 

@@ -27,16 +27,19 @@ public class Grab : MonoBehaviour {
     public void OnGrab(InputAction.CallbackContext context) {
         if (_player_targeter.targeted_enemy != null && _held_enemy == null) {
             if (_player_targeter.targeted_enemy.PickUpAble) {
+                Debug.Log("Picked up enemy");
                 _held_enemy = _player_targeter.targeted_enemy;
                 _held_enemy.transform.parent = _hold_point;
+                _held_enemy.transform.position = _hold_point.position;
                 _held_enemy.GetComponent<Collider>().enabled = false;
-                //_held_enemy.GetComponent<Rigidbody>().
+                _held_enemy.GetComponent<Rigidbody>().isKinematic = true;
             }
         }
         else if (_held_enemy != null) {
             //Drop enemy
             _held_enemy.transform.parent = null;
             _held_enemy.GetComponent<Collider>().enabled = true;
+            _held_enemy.GetComponent<Rigidbody>().isKinematic = false;
 
             _held_enemy = null;
         }
