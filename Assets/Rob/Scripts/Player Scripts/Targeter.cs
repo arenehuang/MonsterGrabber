@@ -45,7 +45,6 @@ public class Targeter : MonoBehaviour {
     public void SetMovement(InputAction.CallbackContext context) {
         _raw_movement = context.ReadValue<Vector2>();
         probe_transform.localPosition = new Vector3(_raw_movement.x, 0, _raw_movement.y);
-        //Debug.Log("Raw Movement: " + _raw_movement.x + ", " + _raw_movement.y);
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -55,7 +54,6 @@ public class Targeter : MonoBehaviour {
             }
 
             targetable_enemies.Add(other.GetComponent<Enemy>());
-
         }
     }
 

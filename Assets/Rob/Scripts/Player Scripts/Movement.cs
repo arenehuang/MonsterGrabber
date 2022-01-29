@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour {
     [SerializeField] private bool _can_move = true;
     [SerializeField] private Animator _player_animator;
     [SerializeField] private SpriteRenderer _player_sprite_renderer;
+    [SerializeField] private Grab _player_grab;
 
     public bool CanMove {
         get { return _can_move; }
@@ -28,13 +29,23 @@ public class Movement : MonoBehaviour {
             float lr_movement = _raw_movement.x;
             float fb_movement = _raw_movement.y;
 
+            //Flip sprites as needed
             if (lr_movement > 0) {
                 _player_sprite_renderer.flipX = false;
+
+                if (_player_grab.HeldEnemy != null) {
+                    _player_grab.HeldEnemy.GetComponent<SpriteRenderer>().flipX = false;
+                }
             }
             else if (lr_movement < 0) {
                 _player_sprite_renderer.flipX = true;
+
+                if (_player_grab.HeldEnemy != null) {
+                    _player_grab.HeldEnemy.GetComponent<SpriteRenderer>().flipX = true;
+                }
             }
 
+            //Final movement
             Vector3 total_movment = new Vector3(lr_movement, 0, fb_movement);
             total_movment.Normalize();
 
