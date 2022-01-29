@@ -1,7 +1,58 @@
 fileFormatVersion: 2
 guid: 3834170a9cea98b46b520a702c1e48d4
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2860810959254955927
+    second: grabber_0
+  - first:
+      213: 8261012439189629745
+    second: grabber_1
+  - first:
+      213: 4366434040457518162
+    second: grabber_2
+  - first:
+      213: -2807977450180434004
+    second: grabber_3
+  - first:
+      213: -7159312373218477610
+    second: grabber_4
+  - first:
+      213: 8071775965839500743
+    second: grabber_5
+  - first:
+      213: 3869081301510080615
+    second: grabber_6
+  - first:
+      213: -181186958735366433
+    second: grabber_7
+  - first:
+      213: 3809114068809287475
+    second: grabber_8
+  - first:
+      213: 4380917497620614283
+    second: grabber_9
+  - first:
+      213: -3068888602389598264
+    second: grabber_10
+  - first:
+      213: -5639581169234432567
+    second: grabber_11
+  - first:
+      213: -1898604161616146430
+    second: grabber_12
+  - first:
+      213: -2892428513907967543
+    second: grabber_13
+  - first:
+      213: 1608529262813510090
+    second: grabber_14
+  - first:
+      213: -6800910252643944680
+    second: grabber_15
+  - first:
+      213: -3249682168719274563
+    second: grabber_16
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +83,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 2
     mipBias: 0
     wrapU: 1
@@ -125,11 +176,368 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: grabber_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 480
+        width: 127
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 797afe30964a3b720800000000000000
+      internalID: 2860810959254955927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabber_1
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 480
+        width: 127
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b2bf27b0305a270800000000000000
+      internalID: 8261012439189629745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabber_2
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 480
+        width: 127
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25cd4ac10a0b89c30800000000000000
+      internalID: 4366434040457518162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabber_3
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 384
+        width: 125
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca720b8e26f0809d0800000000000000
+      internalID: -2807977450180434004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabber_4
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 384
+        width: 125
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d9f046045305ac90800000000000000
+      internalID: -7159312373218477610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabber_5
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 384
+        width: 127
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c5266e8975b40070800000000000000
+      internalID: 8071775965839500743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabber_6
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 288
+        width: 127
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7684d97c1fcb1b530800000000000000
+      internalID: 3869081301510080615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabber_7
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 288
+        width: 127
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd625a6cb6b4c7df0800000000000000
+      internalID: -181186958735366433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabber_8
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 288
+        width: 125
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33702546011bcd430800000000000000
+      internalID: 3809114068809287475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabber_9
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 192
+        width: 127
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c48f3c0452ccc30800000000000000
+      internalID: 4380917497620614283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabber_10
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 192
+        width: 127
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cfa257631e1965d0800000000000000
+      internalID: -3068888602389598264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabber_11
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 192
+        width: 125
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cdaccd6ece2cb1b0800000000000000
+      internalID: -5639581169234432567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabber_12
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 96
+        width: 120
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2009ac1039dc6a5e0800000000000000
+      internalID: -1898604161616146430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabber_13
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 96
+        width: 111
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9fd4267970cd7d0800000000000000
+      internalID: -2892428513907967543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabber_14
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 96
+        width: 111
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac9f1d897d4a25610800000000000000
+      internalID: 1608529262813510090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabber_15
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 0
+        width: 126
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81778d178205e91a0800000000000000
+      internalID: -6800910252643944680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabber_16
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 0
+        width: 127
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd019cf84fc6e2d0800000000000000
+      internalID: -3249682168719274563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 08265939aae3cdf48ae8c8574f9e5757
     internalID: 0
     vertices: []
     indices: 

@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour {
     [SerializeField] private float _current_speed = 3f;
     [SerializeField] private Vector2 _raw_movement;
     [SerializeField] private bool _can_move = true;
+    [SerializeField] private Animator _player_animator;
 
     public bool CanMove {
         get { return _can_move; }
@@ -21,7 +22,8 @@ public class Movement : MonoBehaviour {
     }
 
     private void Walk() {
-        if (_can_move) {
+        if (_can_move && _raw_movement.magnitude > 0) {
+            _player_animator.SetBool("Walking", true);
             float lr_movement = _raw_movement.x;
             float fb_movement = _raw_movement.y;
 
@@ -29,6 +31,9 @@ public class Movement : MonoBehaviour {
             total_movment.Normalize();
 
             this.transform.Translate(total_movment * _current_speed * Time.deltaTime);
+        }
+        else {
+            _player_animator.SetBool("Walking", false);
         }
     }
 

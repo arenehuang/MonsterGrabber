@@ -1210,6 +1210,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1319536841}
   - component: {fileID: 1319536842}
+  - component: {fileID: 1319536843}
+  - component: {fileID: 1319536844}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -1226,7 +1228,7 @@ Transform:
   m_GameObject: {fileID: 1319536840}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.2896, y: 3.2896, z: 3.2896}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1523986865}
   m_RootOrder: 0
@@ -1271,7 +1273,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 2860810959254955927, guid: 3834170a9cea98b46b520a702c1e48d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1282,6 +1284,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1319536843
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319536840}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9d5f43a19225fd14d82e5938ce13604b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1319536844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319536840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 739446c6c6639d44ca26ac18f213d4a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _can_attack: 1
+  _is_attacking: 0
+  _player_transform: {fileID: 1523986865}
+  _player_movement: {fileID: 1523986869}
+  _player_targeter: {fileID: 1834335599}
+  _player_rigidbody: {fileID: 1523986867}
+  _last_raw_movement: {x: 0, y: 0}
+  _attack_speed: 8
+  _current_damage: 1
+  _standard_damage: 1
+  _enemy_to_attack: {fileID: 0}
+  _knock_back_force: 1
+  _attack_direction: {x: 0, y: 0, z: 0}
+  _player_animator: {fileID: 1319536843}
 --- !u!1 &1363551804
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,7 +1530,6 @@ GameObject:
   - component: {fileID: 1523986867}
   - component: {fileID: 1523986868}
   - component: {fileID: 1523986869}
-  - component: {fileID: 1523986870}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1588,7 +1634,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1523986870}
+      - m_Target: {fileID: 1319536844}
         m_TargetAssemblyTypeName: Attack, Assembly-CSharp
         m_MethodName: SetMovement
         m_Mode: 0
@@ -1604,7 +1650,7 @@ MonoBehaviour:
     m_ActionName: Player/Walk[/Keyboard/w,/Keyboard/a,/Keyboard/s,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1523986870}
+      - m_Target: {fileID: 1319536844}
         m_TargetAssemblyTypeName: Attack, Assembly-CSharp
         m_MethodName: OnAttack
         m_Mode: 0
@@ -1642,30 +1688,7 @@ MonoBehaviour:
   _current_speed: 3
   _raw_movement: {x: 0, y: 0}
   _can_move: 1
---- !u!114 &1523986870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1523986864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 739446c6c6639d44ca26ac18f213d4a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _can_attack: 1
-  _is_attacking: 0
-  _player_movement: {fileID: 1523986869}
-  _player_targeter: {fileID: 1834335599}
-  _player_rigidbody: {fileID: 1523986867}
-  _last_raw_movement: {x: 0, y: 0}
-  _attack_speed: 8
-  _current_damage: 1
-  _standard_damage: 1
-  _enemy_to_attack: {fileID: 0}
-  _knock_back_force: 1
-  _attack_direction: {x: 0, y: 0, z: 0}
+  _player_animator: {fileID: 1319536843}
 --- !u!1 &1789170525
 GameObject:
   m_ObjectHideFlags: 0

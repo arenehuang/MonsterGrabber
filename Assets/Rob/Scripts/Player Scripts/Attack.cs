@@ -8,6 +8,7 @@ public class Attack : MonoBehaviour {
 
     [SerializeField] private bool _can_attack = true;
     [SerializeField] private bool _is_attacking = false;
+    [SerializeField] private Transform _player_transform;
     [SerializeField] private Movement _player_movement;
     [SerializeField] private Targeter _player_targeter;
     [SerializeField] private Rigidbody _player_rigidbody;
@@ -22,6 +23,8 @@ public class Attack : MonoBehaviour {
     [SerializeField] private float _knock_back_force = 3f;
 
     [SerializeField] private Vector3 _attack_direction;
+
+    [SerializeField] private Animator _player_animator;
 
 
     // Start is called before the first frame update
@@ -43,6 +46,8 @@ public class Attack : MonoBehaviour {
 
     public void OnAttack(InputAction.CallbackContext context) {
         if (context.performed && !_is_attacking) {
+            _player_animator.SetBool("Attacking", true);
+
             _player_movement.CanMove = false;
             _is_attacking = true;
 
@@ -53,7 +58,7 @@ public class Attack : MonoBehaviour {
             _attack_direction = new Vector3();
             if (_enemy_to_attack != null) {
                 //Vector3 raw_direction = (this.transform.position - _enemy_to_attack.transform.position).normalized;
-                _attack_direction = (_enemy_to_attack.transform.position - this.transform.position).normalized;
+                _attack_direction = (_enemy_to_attack.transform.position - _player_transform.position).normalized;
             }
             else {
                 Debug.Log("Enemy to attack was null");
@@ -65,14 +70,20 @@ public class Attack : MonoBehaviour {
 
     private void AttackMovement() {
         if (_is_attacking) {
-            transform.Translate(_attack_direction * Time.deltaTime * _attack_speed);
+            _player_transform.Translate(_attack_direction * Time.deltaTime * _attack_speed);
         }
+    }
+
+    public void FinishAttack() {
+        _is_attacking = false;
+        _player_movement.CanMove = true;
+        _player_animator.SetBool("Attacking", false);
     }
 
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.tag == "Enemy" && _is_attacking) {
             collision.gameObject.GetComponent<Enemy>().DoDamage(_current_damage);
-            collision.rigidbody.AddExplosionForce(_knock_back_force, this.transform.position, 1.1f);
+            collision.rigidbody.AddExplosionForce(_knock_back_force, _player_transform.position, 1.1f);
 
             if (collision.gameObject.GetComponent<Enemy>() == _enemy_to_attack) {
             }
