@@ -26,11 +26,14 @@ public class Targeter : MonoBehaviour {
         CheckTargetableEnemies();
     }
 
-    private void CheckTargetableEnemies() {
-        if (targetable_enemies.Count > 1 && targeted_enemy != null) {
+    public void CheckTargetableEnemies() {
+        if (targetable_enemies.Count > 1) {
             foreach (Enemy e in targetable_enemies) {
 
-                if (e != targeted_enemy) {
+                if (targeted_enemy == null) {
+                    targeted_enemy = e;
+                }
+                else if (e != targeted_enemy && e!= null) {
                     float others_distance = Vector3.Distance(probe_transform.position, e.transform.position);
                     float current_target_distance = Vector3.Distance(probe_transform.position, targeted_enemy.transform.position);
 
@@ -45,7 +48,6 @@ public class Targeter : MonoBehaviour {
     public void SetMovement(InputAction.CallbackContext context) {
         _raw_movement = context.ReadValue<Vector2>();
         probe_transform.localPosition = new Vector3(_raw_movement.x, 0, _raw_movement.y);
-        //Debug.Log("Raw Movement: " + _raw_movement.x + ", " + _raw_movement.y);
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -55,7 +57,6 @@ public class Targeter : MonoBehaviour {
             }
 
             targetable_enemies.Add(other.GetComponent<Enemy>());
-
         }
     }
 

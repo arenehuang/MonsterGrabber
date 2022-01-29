@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &446268670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 446268671}
+  m_Layer: 0
+  m_Name: Hold Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &446268671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446268670}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7553205478798675762}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7553205478798675763
 GameObject:
   m_ObjectHideFlags: 0
@@ -16,6 +46,7 @@ GameObject:
   - component: {fileID: 7553205478798675771}
   - component: {fileID: 7553205478798675764}
   - component: {fileID: 7553205478798675765}
+  - component: {fileID: 1781222316180083127}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -36,6 +67,7 @@ Transform:
   m_Children:
   - {fileID: 7553205479495156717}
   - {fileID: 7553205479128162019}
+  - {fileID: 446268671}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -272,6 +304,21 @@ MonoBehaviour:
   _attack_direction: {x: 0, y: 0, z: 0}
   _player_animator: {fileID: 7553205478798675764}
   _player_sprite_renderer: {fileID: 7553205478798675771}
+--- !u!114 &1781222316180083127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7553205478798675763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfffec35ddc3e0e44afe9786d3f6149f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player_targeter: {fileID: 7553205479495156716}
+  _held_enemy: {fileID: 0}
+  _hold_point: {fileID: 446268671}
 --- !u!1 &7553205479128162012
 GameObject:
   m_ObjectHideFlags: 0
