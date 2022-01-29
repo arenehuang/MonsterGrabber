@@ -94,7 +94,7 @@ public class Attack : MonoBehaviour {
 
         if (_is_attacking) {
             if (collision.gameObject.tag == "Enemy") {
-                collision.gameObject.GetComponent<Enemy>().DoDamage(_current_damage);
+                collision.gameObject.GetComponent<Enemy>().TakeDamage(_current_damage);
 
                 _player_targeter.CheckTargetableEnemies();
             }

@@ -9,6 +9,10 @@ public class Enemy : MonoBehaviour {
     [SerializeField] protected float _max_health = 5f;
     [SerializeField] protected float _pickupable_health = 1f;
 
+    [SerializeField] protected float _current_speed = 3f;
+    [SerializeField] protected float _walk_speed = 3f;
+    [SerializeField] protected float _chase_speed = 3f;
+
     [SerializeField] protected float _pickupable_timer = 3f;
 
     [SerializeField] protected bool _did_pickupable_check = false;
@@ -20,12 +24,24 @@ public class Enemy : MonoBehaviour {
     [SerializeField] protected bool _pickupable = false;
     [SerializeField] protected bool _aggroed = false;
 
-    [SerializeField] protected List<Transform> _way_points;
+    [SerializeField] protected Transform _area_waypoint;
+    [SerializeField] protected float _distance_from_waypoint;
+    [SerializeField] protected float _max_distance_from_waypoint;
+
 
     [SerializeField] protected SpriteRenderer _enemy_sprite_renderer;
     [SerializeField] protected Color _default_color;
     [SerializeField] protected Color _flash_color;
     [SerializeField] protected float _flash_timer = 0.5f;
+
+    [SerializeField] protected Transform _player_transform;
+    [SerializeField] protected bool _is_walking = true;
+    [SerializeField] protected float _walk_time = 2f;
+    [SerializeField] protected float _walk_wait_timer = 2f;
+
+    [SerializeField] protected float _current_distance_from_player = 1000f;
+    [SerializeField] protected float _deaggro_distance = 5f;
+
 
     public bool PickUpAble {
         get { return _pickupable; }
@@ -37,19 +53,23 @@ public class Enemy : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {
+    void FixedUpdate() {
         CheckHealth();
     }
 
-    public void DoDamage(float damage) {
+    public void TakeDamage(float damage) {
         _current_health -= damage;
         _did_pickupable_check = false;
     }
 
-    protected void Attack() { 
+    protected virtual void Attack() { 
     }
 
-    protected void Wander() { 
+    protected virtual void Wander() {
+
+    }
+
+    protected virtual void Follow() { 
     }
 
     protected void CheckHealth() {
@@ -84,7 +104,14 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    public void Use() {
+    public virtual void Use() {
         Debug.Log("Being used");
+    }
+
+    protected virtual void OnTriggerEnter(Collider other) {
+        if (other.tag == "Player") {
+            _player_transform = other.transform;
+            _aggroed = true;
+        }
     }
 }
