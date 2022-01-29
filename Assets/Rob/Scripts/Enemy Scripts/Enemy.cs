@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        
+        CheckHealth();
     }
 
     public void DoDamage(float damage) {
@@ -35,5 +35,11 @@ public class Enemy : MonoBehaviour {
     }
 
     protected void Wander() { 
+    }
+
+    protected void CheckHealth() {
+        if (_current_health <= 0) {
+            Destroy(this.gameObject);
+        }
     }
 }

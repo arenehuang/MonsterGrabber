@@ -53,11 +53,9 @@ public class Attack : MonoBehaviour {
 
             _enemy_to_attack = _player_targeter.targeted_enemy;
 
-            //If an enemy is targeted add force in their direction. Otherwise, addforce in direction of movement.
-            //Add force in direction of targeted
             _attack_direction = new Vector3();
+
             if (_enemy_to_attack != null) {
-                //Vector3 raw_direction = (this.transform.position - _enemy_to_attack.transform.position).normalized;
                 _attack_direction = (_enemy_to_attack.transform.position - _player_transform.position).normalized;
             }
             else {
