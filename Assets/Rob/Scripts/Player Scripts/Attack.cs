@@ -59,7 +59,6 @@ public class Attack : MonoBehaviour {
                 _attack_direction = (_enemy_to_attack.transform.position - _player_transform.position).normalized;
             }
             else {
-                Debug.Log("Enemy to attack was null");
                 _attack_direction = new Vector3(_last_raw_movement.x, 0, _last_raw_movement.y).normalized;
             }
 
@@ -86,11 +85,18 @@ public class Attack : MonoBehaviour {
     }
 
     private void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.tag == "Enemy" && _is_attacking) {
-            collision.gameObject.GetComponent<Enemy>().DoDamage(_current_damage);
-            collision.rigidbody.AddExplosionForce(_knock_back_force, _player_transform.position, 1.1f);
 
-            if (collision.gameObject.GetComponent<Enemy>() == _enemy_to_attack) {
+        if (_is_attacking) {
+            if (collision.gameObject.tag == "Enemy") {
+                collision.gameObject.GetComponent<Enemy>().DoDamage(_current_damage);
+            }
+
+            //Apply knockback
+            Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
+            if (rb != null) {
+                Debug.Log("Applying knockback");
+                Vector3 direction = collision.transform.position - _player_transform.position;
+                rb.AddForce(direction.normalized * _knock_back_force, ForceMode.Impulse);
             }
         }
     }
