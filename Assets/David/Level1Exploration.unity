@@ -7866,7 +7866,7 @@ Terrain:
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 80
-  m_DetailObjectDensity: 1
+  m_DetailObjectDensity: 0.407
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
   m_HeightmapMaximumLOD: 0
@@ -12307,38 +12307,6 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1857805303}
-    - target: {fileID: 4477995403737777906, guid: 3ce96dc5fad97ea4cbe09817e11e3c54, type: 3}
-      propertyPath: m_LookAt
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4477995403737777907, guid: 3ce96dc5fad97ea4cbe09817e11e3c54, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.053382874
-      objectReference: {fileID: 0}
-    - target: {fileID: 4477995403737777907, guid: 3ce96dc5fad97ea4cbe09817e11e3c54, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7.1299963
-      objectReference: {fileID: 0}
-    - target: {fileID: 4477995403737777907, guid: 3ce96dc5fad97ea4cbe09817e11e3c54, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -7.0552177
-      objectReference: {fileID: 0}
-    - target: {fileID: 4477995403737777907, guid: 3ce96dc5fad97ea4cbe09817e11e3c54, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9539438
-      objectReference: {fileID: 0}
-    - target: {fileID: 4477995403737777907, guid: 3ce96dc5fad97ea4cbe09817e11e3c54, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.29998553
-      objectReference: {fileID: 0}
-    - target: {fileID: 4477995403737777907, guid: 3ce96dc5fad97ea4cbe09817e11e3c54, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.000000016413916
-      objectReference: {fileID: 0}
-    - target: {fileID: 4477995403737777907, guid: 3ce96dc5fad97ea4cbe09817e11e3c54, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.000000005161664
-      objectReference: {fileID: 0}
     - target: {fileID: 4477995403973851760, guid: 3ce96dc5fad97ea4cbe09817e11e3c54, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -12386,46 +12354,6 @@ PrefabInstance:
     - target: {fileID: 4477995403973851767, guid: 3ce96dc5fad97ea4cbe09817e11e3c54, type: 3}
       propertyPath: m_Name
       value: Cameras
-      objectReference: {fileID: 0}
-    - target: {fileID: 4477995404546007278, guid: 3ce96dc5fad97ea4cbe09817e11e3c54, type: 3}
-      propertyPath: m_FollowOffset.y
-      value: 6.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 4477995404546007278, guid: 3ce96dc5fad97ea4cbe09817e11e3c54, type: 3}
-      propertyPath: m_FollowOffset.z
-      value: -10.46
-      objectReference: {fileID: 0}
-    - target: {fileID: 4477995404551258704, guid: 3ce96dc5fad97ea4cbe09817e11e3c54, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.053382874
-      objectReference: {fileID: 0}
-    - target: {fileID: 4477995404551258704, guid: 3ce96dc5fad97ea4cbe09817e11e3c54, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7.1299963
-      objectReference: {fileID: 0}
-    - target: {fileID: 4477995404551258704, guid: 3ce96dc5fad97ea4cbe09817e11e3c54, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -7.0552177
-      objectReference: {fileID: 0}
-    - target: {fileID: 4477995404551258704, guid: 3ce96dc5fad97ea4cbe09817e11e3c54, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9539438
-      objectReference: {fileID: 0}
-    - target: {fileID: 4477995404551258704, guid: 3ce96dc5fad97ea4cbe09817e11e3c54, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.29998553
-      objectReference: {fileID: 0}
-    - target: {fileID: 4477995404551258704, guid: 3ce96dc5fad97ea4cbe09817e11e3c54, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.000000016413916
-      objectReference: {fileID: 0}
-    - target: {fileID: 4477995404551258704, guid: 3ce96dc5fad97ea4cbe09817e11e3c54, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.000000005161664
-      objectReference: {fileID: 0}
-    - target: {fileID: 4477995404551258708, guid: 3ce96dc5fad97ea4cbe09817e11e3c54, type: 3}
-      propertyPath: m_UpdateMethod
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ce96dc5fad97ea4cbe09817e11e3c54, type: 3}
