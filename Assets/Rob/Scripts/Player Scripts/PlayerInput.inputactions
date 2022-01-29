@@ -91,6 +91,17 @@
                 },
                 {
                     "name": "",
+                    "id": "bc57f5ce-a841-48c8-92cf-0605407fb45f",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Walk",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "ade08717-8b6b-4afe-92a7-fdc44ef11fd4",
                     "path": "<Keyboard>/enter",
                     "interactions": "",
@@ -102,8 +113,30 @@
                 },
                 {
                     "name": "",
+                    "id": "53618b35-52de-46e8-ae82-0fec7cef13ad",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "25207cb1-3c78-4f6e-b8e0-76e4047be329",
                     "path": "<Keyboard>/quote",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Grab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "18b09e61-d787-4e78-b722-bf1ffacd5253",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
