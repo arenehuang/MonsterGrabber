@@ -437,6 +437,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7553205478798675762}
     m_Modifications:
+    - target: {fileID: 4723989028127669206, guid: 67687e24d29dbf04aaa81aef80faa3c8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723989028400045309, guid: 67687e24d29dbf04aaa81aef80faa3c8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723989028683117657, guid: 67687e24d29dbf04aaa81aef80faa3c8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723989028754219329, guid: 67687e24d29dbf04aaa81aef80faa3c8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723989028934995524, guid: 67687e24d29dbf04aaa81aef80faa3c8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4723989029129015824, guid: 67687e24d29dbf04aaa81aef80faa3c8, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -496,6 +516,10 @@ PrefabInstance:
     - target: {fileID: 4723989029129015825, guid: 67687e24d29dbf04aaa81aef80faa3c8, type: 3}
       propertyPath: m_Name
       value: Reticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723989029129015825, guid: 67687e24d29dbf04aaa81aef80faa3c8, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4723989029129015825, guid: 67687e24d29dbf04aaa81aef80faa3c8, type: 3}
       propertyPath: m_IsActive
